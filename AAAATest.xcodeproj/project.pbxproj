@@ -20,6 +20,9 @@
 		FD6DEA57202AF262005C5A95 /* AEColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6DEA56202AF262005C5A95 /* AEColor.swift */; };
 		FD6DEA5A202B1507005C5A95 /* OverlayScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6DEA59202B1507005C5A95 /* OverlayScrollView.swift */; };
 		FD6DEA5D202B43BC005C5A95 /* TouchDelayGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6DEA5C202B43BC005C5A95 /* TouchDelayGestureRecognizer.swift */; };
+		FDEE5B76202C3C45001CDDDA /* ExploringScrollviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE5B75202C3C45001CDDDA /* ExploringScrollviewViewController.swift */; };
+		FDEE5B79202C3D6A001CDDDA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE5B78202C3D6A001CDDDA /* CollectionViewCell.swift */; };
+		FDEE5B7C202C4909001CDDDA /* ScrollingCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE5B7B202C4909001CDDDA /* ScrollingCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		FD6DEA56202AF262005C5A95 /* AEColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEColor.swift; sourceTree = "<group>"; };
 		FD6DEA59202B1507005C5A95 /* OverlayScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScrollView.swift; sourceTree = "<group>"; };
 		FD6DEA5C202B43BC005C5A95 /* TouchDelayGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDelayGestureRecognizer.swift; sourceTree = "<group>"; };
+		FDEE5B75202C3C45001CDDDA /* ExploringScrollviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringScrollviewViewController.swift; sourceTree = "<group>"; };
+		FDEE5B78202C3D6A001CDDDA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		FDEE5B7B202C4909001CDDDA /* ScrollingCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +115,13 @@
 		FD249DB9201CDF490050B17C /* AAAATest */ = {
 			isa = PBXGroup;
 			children = (
+				FDEE5B7A202C48EF001CDDDA /* protocol */,
+				FDEE5B77202C3D3B001CDDDA /* Cell */,
+				FDEE5B74202C3C04001CDDDA /* Controller */,
 				FD6DEA5B202B438F005C5A95 /* Gesture */,
 				FD6DEA58202B14F0005C5A95 /* View */,
 				FD249DBA201CDF490050B17C /* AppDelegate.swift */,
-				FD249DBC201CDF490050B17C /* ViewController.swift */,
 				FD468A382029D2FF00D21FD0 /* ViewControllerB.swift */,
-				FD4A81D02027177100DE9970 /* AView.swift */,
 				FD6DEA56202AF262005C5A95 /* AEColor.swift */,
 				FD4A81CE2026A55200DE9970 /* TableViewController.swift */,
 				FD249DBE201CDF490050B17C /* Main.storyboard */,
@@ -146,6 +153,7 @@
 		FD6DEA58202B14F0005C5A95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD4A81D02027177100DE9970 /* AView.swift */,
 				FD6DEA59202B1507005C5A95 /* OverlayScrollView.swift */,
 			);
 			path = View;
@@ -157,6 +165,31 @@
 				FD6DEA5C202B43BC005C5A95 /* TouchDelayGestureRecognizer.swift */,
 			);
 			path = Gesture;
+			sourceTree = "<group>";
+		};
+		FDEE5B74202C3C04001CDDDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD249DBC201CDF490050B17C /* ViewController.swift */,
+				FDEE5B75202C3C45001CDDDA /* ExploringScrollviewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FDEE5B77202C3D3B001CDDDA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE5B78202C3D6A001CDDDA /* CollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FDEE5B7A202C48EF001CDDDA /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE5B7B202C4909001CDDDA /* ScrollingCellDelegate.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,13 +326,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE5B79202C3D6A001CDDDA /* CollectionViewCell.swift in Sources */,
 				FD249DBD201CDF490050B17C /* ViewController.swift in Sources */,
 				FD4A81CF2026A55200DE9970 /* TableViewController.swift in Sources */,
 				FD468A392029D2FF00D21FD0 /* ViewControllerB.swift in Sources */,
 				FD4A81D12027177100DE9970 /* AView.swift in Sources */,
 				FD6DEA5A202B1507005C5A95 /* OverlayScrollView.swift in Sources */,
+				FDEE5B7C202C4909001CDDDA /* ScrollingCellDelegate.swift in Sources */,
 				FD249DBB201CDF490050B17C /* AppDelegate.swift in Sources */,
 				FD6DEA57202AF262005C5A95 /* AEColor.swift in Sources */,
+				FDEE5B76202C3C45001CDDDA /* ExploringScrollviewViewController.swift in Sources */,
 				FD6DEA5D202B43BC005C5A95 /* TouchDelayGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,19 +34,13 @@ class ViewController: UIViewController {
         canvasView.backgroundColor = UIColor.darkGray
         view.addSubview(canvasView)
         
-//        let touchDelay = TouchDelayGestureRecognizer(target: nil, action: nil)
-//        canvasView.addGestureRecognizer(touchDelay)
         
         let device = view.traitCollection.userInterfaceIdiom
         addDots(count: device == .pad ? 25 : 10, toView: canvasView)
         AView.arrangeDotsRandomlyInView(containerView: canvasView)
         
         scrollView = OverlayScrollView(frame: bounds)
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        } else {
-            // Fallback on earlier versions
-        }
+        scrollView.showsVerticalScrollIndicator = false
         view.addSubview(scrollView)
         
         drawerView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
